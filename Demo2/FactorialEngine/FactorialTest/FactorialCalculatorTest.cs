@@ -29,5 +29,37 @@ namespace FactorialTest
             
             Assert.AreEqual("very big number", actualResult);
         }
+
+        [TestMethod]
+        public void DoesNotCallTheWebServiceForNumbersSmallerThan20()
+        {
+            for (var i = 19; i >= 0; i--)
+            {
+                _factorialCalculator.Calculate(i);
+            }
+
+            _factorialWebService.AssertWasNotCalled(s => s.GetFactorialFor(Arg<string>.Is.Anything));
+        }
+
+        [TestMethod]
+        public void CalculatesFactorialOfZeroLocally()
+        {
+            var actualValue = _factorialCalculator.Calculate(0);
+            Assert.AreEqual("1", actualValue);
+        }
+
+        [TestMethod]
+        public void CalculatesFactorialOfOneLocally()
+        {
+            var actualValue = _factorialCalculator.Calculate(2);
+            Assert.AreEqual("2", actualValue);
+        }
+
+        [TestMethod]
+        public void CalculatesFactorialOfThreeLocally()
+        {
+            var actualValue = _factorialCalculator.Calculate(3);
+            Assert.AreEqual("6", actualValue);
+        }
     }
 }
