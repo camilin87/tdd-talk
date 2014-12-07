@@ -9,7 +9,7 @@ namespace FactorialEngine
                 return 1;
             }
 
-            return n;
+            return n * Calculate(n - 1);
         }
     }
 }

@@ -35,5 +35,11 @@ namespace FactorialTest
         {
             FactorialOf(2, shouldBe: 2);
         }
+
+        [TestMethod]
+        public void ThreeFactorialShouldBeSix()
+        {
+            FactorialOf(3, shouldBe: 6);
+        }
     }
 }
