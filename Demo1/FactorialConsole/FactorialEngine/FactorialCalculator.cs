@@ -2,9 +2,14 @@ namespace FactorialEngine
 {
     public class FactorialCalculator
     {
-        public int Calculate(int i)
+        public int Calculate(int n)
         {
-            return 1;
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            return n;
         }
     }
 }
