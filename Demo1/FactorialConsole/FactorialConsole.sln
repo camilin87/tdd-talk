@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialConsole", "FactorialConsole\FactorialConsole.csproj", "{8B550B78-EC74-49D8-9349-A06065E8064D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialTest", "FactorialTest\FactorialTest.csproj", "{B21D485A-DF41-4605-80CE-86285755A717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialEngine", "FactorialEngine\FactorialEngine.csproj", "{75BCF946-CEC3-48C1-9C4F-CACC54C7CD3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8B550B78-EC74-49D8-9349-A06065E8064D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B550B78-EC74-49D8-9349-A06065E8064D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B550B78-EC74-49D8-9349-A06065E8064D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21D485A-DF41-4605-80CE-86285755A717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21D485A-DF41-4605-80CE-86285755A717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21D485A-DF41-4605-80CE-86285755A717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21D485A-DF41-4605-80CE-86285755A717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BCF946-CEC3-48C1-9C4F-CACC54C7CD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BCF946-CEC3-48C1-9C4F-CACC54C7CD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BCF946-CEC3-48C1-9C4F-CACC54C7CD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BCF946-CEC3-48C1-9C4F-CACC54C7CD3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
