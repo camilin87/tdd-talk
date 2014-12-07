@@ -17,6 +17,8 @@ namespace FactorialEngine
 
         public string Calculate(int n)
         {
+            _factorialWebService.GetFactorialFor(n);
+
             return "really big number";
         }
     }

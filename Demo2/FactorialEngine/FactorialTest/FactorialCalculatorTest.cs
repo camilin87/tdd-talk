@@ -9,24 +9,28 @@ namespace FactorialTest
     public class FactorialCalculatorTest
     {
         private IFactorialWebService _factorialWebService;
+        private FactorialCalculator _factorialCalculator;
 
         [TestInitialize]
         public void Setup()
         {
             _factorialWebService = MockRepository.GenerateMock<IFactorialWebService>();
+            _factorialCalculator = new FactorialCalculator(_factorialWebService);
         }
 
         [TestMethod]
         public void Calculates20KFactorial()
         {
-            var actualValue = new FactorialCalculator(_factorialWebService).Calculate(20000);
+            var actualValue = _factorialCalculator.Calculate(20000);
             Assert.AreEqual("really big number", actualValue);
         }
 
         [TestMethod]
-        public void ShouldGetTheDataFromAWebservice()
+        public void ShouldGetTheDataFromTheFactorialWebService()
         {
-            new FactorialCalculator(_factorialWebService);
+            _factorialCalculator.Calculate(3);
+
+            _factorialWebService.AssertWasCalled(s => s.GetFactorialFor(3));
         }
     }
 }
