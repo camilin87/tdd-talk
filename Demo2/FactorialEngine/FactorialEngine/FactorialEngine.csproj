@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FactorialCalculator.cs" />
+    <Compile Include="FactorialWebService.cs" />
     <Compile Include="IFactorialWebService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
