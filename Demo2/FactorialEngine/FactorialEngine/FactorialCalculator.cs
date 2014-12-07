@@ -11,7 +11,8 @@
 
         public string Calculate(int n)
         {
-            return _factorialWebService.GetFactorialFor(n);
+            var url = string.Format("https://murmuring-ravine-8545.herokuapp.com/?n={0}", n);
+            return _factorialWebService.GetFactorialFor(url);
         }
     }
 }

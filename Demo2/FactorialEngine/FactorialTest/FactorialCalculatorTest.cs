@@ -21,7 +21,8 @@ namespace FactorialTest
         [TestMethod]
         public void ShouldReturnTheFactorialWebServiceResult()
         {
-            _factorialWebService.Stub(s => s.GetFactorialFor(1000))
+            _factorialWebService.Stub(s => s.GetFactorialFor(
+                "https://murmuring-ravine-8545.herokuapp.com/?n=1000"))
                 .Return("very big number");
 
             var actualResult = _factorialCalculator.Calculate(1000);
