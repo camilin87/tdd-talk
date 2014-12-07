@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FactorialEngine
+﻿namespace FactorialEngine
 {
     public class FactorialCalculator
     {
@@ -17,9 +11,7 @@ namespace FactorialEngine
 
         public string Calculate(int n)
         {
-            _factorialWebService.GetFactorialFor(n);
-
-            return "really big number";
+            return _factorialWebService.GetFactorialFor(n);
         }
     }
 }

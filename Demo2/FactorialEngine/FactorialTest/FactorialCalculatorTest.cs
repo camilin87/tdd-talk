@@ -19,18 +19,14 @@ namespace FactorialTest
         }
 
         [TestMethod]
-        public void Calculates20KFactorial()
+        public void ShouldReturnTheFactorialWebServiceResult()
         {
-            var actualValue = _factorialCalculator.Calculate(20000);
-            Assert.AreEqual("really big number", actualValue);
-        }
+            _factorialWebService.Stub(s => s.GetFactorialFor(1000))
+                .Return("very big number");
 
-        [TestMethod]
-        public void ShouldGetTheDataFromTheFactorialWebService()
-        {
-            _factorialCalculator.Calculate(3);
-
-            _factorialWebService.AssertWasCalled(s => s.GetFactorialFor(3));
+            var actualResult = _factorialCalculator.Calculate(1000);
+            
+            Assert.AreEqual("very big number", actualResult);
         }
     }
 }
