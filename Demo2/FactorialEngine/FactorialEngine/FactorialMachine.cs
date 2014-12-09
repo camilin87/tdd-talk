@@ -1,11 +1,11 @@
 
 namespace FactorialEngine
 {
-    public class FactorialCalculator
+    public class FactorialMachine
     {
         private readonly IWebServiceWrapper _webService;
 
-        public FactorialCalculator(IWebServiceWrapper webService)
+        public FactorialMachine(IWebServiceWrapper webService)
         {
             _webService = webService;
         }
