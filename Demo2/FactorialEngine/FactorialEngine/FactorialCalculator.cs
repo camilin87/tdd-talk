@@ -10,9 +10,9 @@ namespace FactorialEngine
             _webService = webService;
         }
 
-        public void Calculate(int number)
+        public string Calculate(int number)
         {
-            _webService.ReadUrl(string.Format("https://murmuring-ravine-8545.herokuapp.com/?n={0}", number));
+            return _webService.ReadUrl(string.Format("https://murmuring-ravine-8545.herokuapp.com/?n={0}", number));
         }
     }
 }
