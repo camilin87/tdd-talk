@@ -1,6 +1,7 @@
 ﻿using System;
 using FactorialEngine;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Rhino.Mocks;
 
 namespace FactorialEngineTest
 {
@@ -10,7 +11,11 @@ namespace FactorialEngineTest
         [TestMethod]
         public void CallsTheFactorialWebService()
         {
-            new FactorialCalculator().Calculate(1000);
+            var webService = MockRepository.GenerateMock<IWebServiceWrapper>();
+
+            new FactorialCalculator(webService).Calculate(1000);
+
+            webService.AssertWasCalled(w => w.ReadUrl("https://murmuring-ravine-8545.herokuapp.com/?n=1000"));
         }
     }
 }
