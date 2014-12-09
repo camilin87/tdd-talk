@@ -1,6 +1,6 @@
 namespace FactorialEngine
 {
-    public class LocalFactorialCalculator
+    public class LocalFactorialCalculator : ILocalFactorialCalculator
     {
         public int Calculate(int n)
         {

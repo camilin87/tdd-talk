@@ -11,9 +11,16 @@ namespace FactorialConsole
     {
         static void Main(string[] args)
         {
-            var factorial = new FactorialMachine(new WebServiceWrapper()).Calculate(1000);
+            var factorialMachine = new FactorialMachine(
+                new WebServiceWrapper(),
+                new LocalFactorialCalculator());
 
+            var factorial = factorialMachine.Calculate(1000);
             Console.WriteLine("The factorial is {0}", factorial);
+
+            factorial = factorialMachine.Calculate(6);
+            Console.WriteLine("The factorial is {0}", factorial);
+
             Console.ReadLine();
         }
     }

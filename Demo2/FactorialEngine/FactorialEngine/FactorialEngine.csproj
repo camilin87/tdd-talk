@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILocalFactorialCalculator.cs" />
     <Compile Include="LocalFactorialCalculator.cs" />
     <Compile Include="FactorialMachine.cs" />
     <Compile Include="IWebServiceWrapper.cs" />
