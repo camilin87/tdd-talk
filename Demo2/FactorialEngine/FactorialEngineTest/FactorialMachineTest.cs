@@ -22,12 +22,15 @@ namespace FactorialEngineTest
         [TestMethod]
         public void CalculatesFactorialLocallyForSmallNumbers()
         {
-            var localFactorialCalculator = MockRepository.GenerateMock<ILocalFactorialCalculator>();
-            localFactorialCalculator.Stub(c => c.Calculate(6)).Return(45678);
+            for (int i = 0; i < 10; i++)
+            {
+                var localFactorialCalculator = MockRepository.GenerateMock<ILocalFactorialCalculator>();
+                localFactorialCalculator.Stub(c => c.Calculate(i)).Return(45678);
 
-            var actualResult = new FactorialMachine(null, localFactorialCalculator).Calculate(6);
-            
-            Assert.AreEqual("45678", actualResult);
+                var actualResult = new FactorialMachine(null, localFactorialCalculator).Calculate(i);
+
+                Assert.AreEqual("45678", actualResult);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace FactorialEngine
 
         public string Calculate(int number)
         {
-            if (number == 6)
+            if (number < 10)
             {
                 return _localFactorialCalculator.Calculate(number).ToString();
             }
